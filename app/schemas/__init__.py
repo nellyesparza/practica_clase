@@ -1,1 +1,12 @@
-# Modelos Pydantic de entrada/salida. Se llena en la Sesión 7.
+# Importación mediante rutas relativas dentro del paquete
+from .usuario import UsuarioCreate, UsuarioResponse
+from .gasto import GastoCreate, GastoResponse
+
+__all__ = [
+    "UsuarioCreate",
+    "UsuarioResponse",
+    "GastoCreate",
+    "GastoResponse",
+]
+
+#ojo esto lo puse YOno es del doc

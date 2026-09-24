@@ -1,0 +1,21 @@
+
+```json
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "jwt_token",
+      "description": "Access token de POST /usuarios/token (sin 'Bearer ')",
+      "password": true
+    }
+  ],
+  "servers": {
+    "gastos-mcp": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${input:jwt_token}"
+      }
+    }
+  }
+}
